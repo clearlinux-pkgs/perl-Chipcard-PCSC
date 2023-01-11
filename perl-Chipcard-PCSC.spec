@@ -4,7 +4,7 @@
 #
 Name     : perl-Chipcard-PCSC
 Version  : 1.4.14
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/W/WH/WHOM/pcsc-perl-1.4.14.tar.bz2
 Source0  : https://cpan.metacpan.org/authors/id/W/WH/WHOM/pcsc-perl-1.4.14.tar.bz2
 Summary  : No detailed summary available
@@ -12,8 +12,12 @@ Group    : Development/Tools
 License  : GPL-2.0
 Requires: perl-Chipcard-PCSC-license = %{version}-%{release}
 Requires: perl-Chipcard-PCSC-perl = %{version}-%{release}
+Requires: pcsc-lite-lib
 BuildRequires : buildreq-cpan
 BuildRequires : pkgconfig(libpcsclite)
+# Suppress stripping binaries
+%define __strip /bin/true
+%define debug_package %{nil}
 
 %description
 Perl interface to the PC/SC smart card library
@@ -73,7 +77,7 @@ make TEST_VERBOSE=1 test || :
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Chipcard-PCSC
-cp %{_builddir}/pcsc-perl-%{version}/LICENCE %{buildroot}/usr/share/package-licenses/perl-Chipcard-PCSC/4cc77b90af91e615a64ae04893fdffa7939db84c
+cp %{_builddir}/pcsc-perl-%{version}/LICENCE %{buildroot}/usr/share/package-licenses/perl-Chipcard-PCSC/4cc77b90af91e615a64ae04893fdffa7939db84c || :
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
