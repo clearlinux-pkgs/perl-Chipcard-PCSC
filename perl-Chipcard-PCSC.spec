@@ -4,7 +4,7 @@
 #
 Name     : perl-Chipcard-PCSC
 Version  : 1.4.14
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/W/WH/WHOM/pcsc-perl-1.4.14.tar.bz2
 Source0  : https://cpan.metacpan.org/authors/id/W/WH/WHOM/pcsc-perl-1.4.14.tar.bz2
 Summary  : No detailed summary available
