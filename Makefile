@@ -1,5 +1,5 @@
 PKG_NAME := perl-Chipcard-PCSC
-URL = https://cpan.metacpan.org/authors/id/W/WH/WHOM/pcsc-perl-1.4.14.tar.bz2
+URL = https://cpan.metacpan.org/authors/id/W/WH/WHOM/Chipcard-PCSC-v1.4.16.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
