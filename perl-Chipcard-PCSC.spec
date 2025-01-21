@@ -7,7 +7,7 @@
 #
 Name     : perl-Chipcard-PCSC
 Version  : 1.4.16
-Release  : 10
+Release  : 11
 URL      : https://cpan.metacpan.org/authors/id/W/WH/WHOM/Chipcard-PCSC-v1.4.16.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/W/WH/WHOM/Chipcard-PCSC-v1.4.16.tar.gz
 Summary  : 'Communicate with a smart card using PC/SC from a Perl script'
